@@ -12,7 +12,11 @@ code {
     monospace;
 }
 
+hr {
+  margin: 40px 0;
+}
 
 .App {
   padding: 0 20px;
+  margin-bottom: 50px;
 }
