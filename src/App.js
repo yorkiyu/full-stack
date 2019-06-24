@@ -12,6 +12,7 @@ import PortalComp from './09Portal/Index';
 import RenderPropsComp from './10RenderProps/Index';
 import HookUseStateComp from './11Hook/UseState';
 import HookUseEffectComp from './11Hook/UseEffect';
+import HookCustomComp from './11Hook/Custom';
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
         <HookUseStateComp title="Hook UseState component"/>
         <hr></hr>
         <HookUseEffectComp title="Hook UseEffect component"/>
+        <hr></hr>
+        <HookCustomComp title="Hook Custom component"/>
     </div>
   );
 }

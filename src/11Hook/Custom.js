@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-function UseEffectComp(props) {
-    const [count, setCount] = useState(0);
+// 自定义Hook
+function useCustomComp(count) {
     const [oddCount, setOddCount] = useState(0);
     const [evenCount, setEvenCount] = useState(0);
 
@@ -18,13 +18,24 @@ function UseEffectComp(props) {
             setEvenCount(evenCount + 1);
         }
     }, [count]);
+    console.log('useCustomComp: ', oddCount, evenCount);
+    return {
+        oddCount,
+        evenCount
+    }
+}
 
+function CountComp(props) {
+    const [count, setCount] = useState(0);
+    // 当触发setCount时，会重新执行该函数
+    const oddEven = useCustomComp(count);
+    console.log('CountComp: ', oddEven);
     return (
         <div>
             <h1>{ props.title }</h1>
             <p>You clicked { count } times</p>
-            <p>Odd { oddCount } times</p>
-            <p>Even { evenCount } times</p>
+            <p>Odd { oddEven.oddCount } times</p>
+            <p>Even { oddEven.evenCount } times</p>
             <button
                 onClick={() => setCount(count + 1)}>
                 Click Me
@@ -33,4 +44,4 @@ function UseEffectComp(props) {
     );
 }
 
-export default UseEffectComp;
+export default CountComp;

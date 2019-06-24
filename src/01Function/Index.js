@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Images/logo.svg';
+import logo from '../00Images/logo.svg';
 import './Index.css';
 
 function Index(props) {
