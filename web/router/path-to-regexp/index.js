@@ -4,12 +4,12 @@ const rule = [
     {
         path: '/foo/:bar',
     },
-    {
-        path: '/foo/:bar/:name',
-    },
-    {
-        path: '/foo/:bar/?name=test',
-    },
+    // {
+    //     path: '/foo/:bar/:name',
+    // },
+    // {
+    //     path: '/foo/:bar/?name=test',
+    // },
     {
         path: '/foo/:bar?',
     },
@@ -21,8 +21,10 @@ const rule = [
 rule.forEach(v => {
     const keys = []
     const regexp = pathToRegexp(v.path, keys);
+    // const parse = pathToRegexp.parse(v.path);
     console.log(v.path);
     console.log(regexp);
+    // console.log(parse);
     console.log(keys);
     console.log('\n\n');
 });
