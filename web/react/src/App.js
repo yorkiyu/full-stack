@@ -13,6 +13,8 @@ import RenderPropsComp from './10RenderProps/Index';
 import HookUseStateComp from './11Hook/UseState';
 import HookUseEffectComp from './11Hook/UseEffect';
 import HookCustomComp from './11Hook/Custom';
+import ContextComp from './012Context/Index';
+import ConsumerComp from './012Context/Consumer';
 
 function App() {
   return (
@@ -44,6 +46,10 @@ function App() {
         <HookUseEffectComp title="Hook UseEffect component"/>
         <hr></hr>
         <HookCustomComp title="Hook Custom component"/>
+        <hr></hr>
+        <ContextComp title="Context component"/>
+        <hr></hr>
+        <ConsumerComp title="Consumer component"/>
     </div>
   );
 }

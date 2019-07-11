@@ -4,14 +4,17 @@ const rule = [
     {
         path: '/foo/:bar',
     },
-    // {
-    //     path: '/foo/:bar/:name',
-    // },
+    {
+        path: '/foo/:bar/:name',
+    },
     // {
     //     path: '/foo/:bar/?name=test',
     // },
     {
         path: '/foo/:bar?',
+    },
+    {
+        path: '/foo/(\\:bar)',
     },
     {
         path: '/icon-:foo(\\d+).png'
